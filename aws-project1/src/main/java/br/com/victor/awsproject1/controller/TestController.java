@@ -1,4 +1,4 @@
-package br.com.victor.aws_project01.controller;
+package br.com.victor.awsproject1.controller;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
