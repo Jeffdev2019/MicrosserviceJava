@@ -230,6 +230,16 @@
    ]
   }
  },
+ "Outputs": {
+  "ExportsOutputRefClusterEB0386A796A0E3FE": {
+   "Value": {
+    "Ref": "ClusterEB0386A7"
+   },
+   "Export": {
+    "Name": "Cluster:ExportsOutputRefClusterEB0386A796A0E3FE"
+   }
+  }
+ },
  "Parameters": {
   "BootstrapVersion": {
    "Type": "AWS::SSM::Parameter::Value<String>",

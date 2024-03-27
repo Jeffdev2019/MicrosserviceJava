@@ -5,9 +5,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="cc0f804c-d2d2-4906-b15e-9bed26512a9b" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/../aws-project1/Dockerfile" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../aws-project1/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/../aws-project1/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cdk.out/Cluster.assets.json" beforeDir="false" afterPath="$PROJECT_DIR$/cdk.out/Cluster.assets.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cdk.out/Cluster.template.json" beforeDir="false" afterPath="$PROJECT_DIR$/cdk.out/Cluster.template.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cdk.out/Vpc.assets.json" beforeDir="false" afterPath="$PROJECT_DIR$/cdk.out/Vpc.assets.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cdk.out/Vpc.template.json" beforeDir="false" afterPath="$PROJECT_DIR$/cdk.out/Vpc.template.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cdk.out/manifest.json" beforeDir="false" afterPath="$PROJECT_DIR$/cdk.out/manifest.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cdk.out/tree.json" beforeDir="false" afterPath="$PROJECT_DIR$/cdk.out/tree.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/myorg/ClusterStack.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/myorg/ClusterStack.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/myorg/CursoAwsCdkApp.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/myorg/CursoAwsCdkApp.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -31,16 +37,16 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "master",
-    "ignore.virus.scanning.warn.message": "true",
-    "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "C:/Workspace/Java/Spring com AWS/aws_project01/curso_aws_cdk"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Workspace/Java/Spring com AWS/aws_project01/curso_aws_cdk&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyClassDialog.RECENTS_KEY">
       <recent name="com.myorg" />
