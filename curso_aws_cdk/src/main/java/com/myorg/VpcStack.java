@@ -17,7 +17,7 @@ public class VpcStack extends Stack {
 
         vpc = Vpc.Builder.create(this, "Vpc01")
                 .maxAzs(2)
-                .natGateways(0)
+                .natGateways(0)// redução de custos não deve ser feito em produção
                 .build();
     }
 

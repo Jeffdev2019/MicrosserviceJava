@@ -5,15 +5,22 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="cc0f804c-d2d2-4906-b15e-9bed26512a9b" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/../aws-project1/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/../aws-project1/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../aws-project1/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/../aws-project1/src/main/resources/application.properties" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cdk.out/Cluster.assets.json" beforeDir="false" afterPath="$PROJECT_DIR$/cdk.out/Cluster.assets.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cdk.out/Cluster.template.json" beforeDir="false" afterPath="$PROJECT_DIR$/cdk.out/Cluster.template.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cdk.out/Service01.assets.json" beforeDir="false" afterPath="$PROJECT_DIR$/cdk.out/Service01.assets.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cdk.out/Service01.template.json" beforeDir="false" afterPath="$PROJECT_DIR$/cdk.out/Service01.template.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cdk.out/Vpc.assets.json" beforeDir="false" afterPath="$PROJECT_DIR$/cdk.out/Vpc.assets.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cdk.out/Vpc.template.json" beforeDir="false" afterPath="$PROJECT_DIR$/cdk.out/Vpc.template.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cdk.out/manifest.json" beforeDir="false" afterPath="$PROJECT_DIR$/cdk.out/manifest.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cdk.out/tree.json" beforeDir="false" afterPath="$PROJECT_DIR$/cdk.out/tree.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/myorg/ClusterStack.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/myorg/ClusterStack.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/myorg/CursoAwsCdkApp.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/myorg/CursoAwsCdkApp.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/myorg/Service01Stack.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/myorg/Service01Stack.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/myorg/VpcStack.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/myorg/VpcStack.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/myorg/CursoAwsCdkApp.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/myorg/CursoAwsCdkApp.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/myorg/Service01Stack.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/myorg/Service01Stack.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

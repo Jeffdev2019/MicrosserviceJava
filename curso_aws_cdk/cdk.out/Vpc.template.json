@@ -695,6 +695,17 @@
   }
  },
  "Outputs": {
+  "ExportsOutputFnGetAttVpc01F824461ADefaultSecurityGroupB47B3935": {
+   "Value": {
+    "Fn::GetAtt": [
+     "Vpc01F824461A",
+     "DefaultSecurityGroup"
+    ]
+   },
+   "Export": {
+    "Name": "Vpc:ExportsOutputFnGetAttVpc01F824461ADefaultSecurityGroupB47B3935"
+   }
+  },
   "ExportsOutputRefVpc01PublicSubnet1Subnet52644D7B09B79E25": {
    "Value": {
     "Ref": "Vpc01PublicSubnet1Subnet52644D7B"

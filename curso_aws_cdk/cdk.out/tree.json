@@ -597,6 +597,14 @@
             "id": "Exports",
             "path": "Vpc/Exports",
             "children": {
+              "Output{\"Fn::GetAtt\":[\"Vpc01F824461A\",\"DefaultSecurityGroup\"]}": {
+                "id": "Output{\"Fn::GetAtt\":[\"Vpc01F824461A\",\"DefaultSecurityGroup\"]}",
+                "path": "Vpc/Exports/Output{\"Fn::GetAtt\":[\"Vpc01F824461A\",\"DefaultSecurityGroup\"]}",
+                "constructInfo": {
+                  "fqn": "aws-cdk-lib.CfnOutput",
+                  "version": "2.133.0"
+                }
+              },
               "Output{\"Ref\":\"Vpc01PublicSubnet1Subnet52644D7B\"}": {
                 "id": "Output{\"Ref\":\"Vpc01PublicSubnet1Subnet52644D7B\"}",
                 "path": "Vpc/Exports/Output{\"Ref\":\"Vpc01PublicSubnet1Subnet52644D7B\"}",
@@ -732,6 +740,189 @@
           "CheckBootstrapVersion": {
             "id": "CheckBootstrapVersion",
             "path": "Cluster/CheckBootstrapVersion",
+            "constructInfo": {
+              "fqn": "aws-cdk-lib.CfnRule",
+              "version": "2.133.0"
+            }
+          }
+        },
+        "constructInfo": {
+          "fqn": "aws-cdk-lib.Stack",
+          "version": "2.133.0"
+        }
+      },
+      "Rds": {
+        "id": "Rds",
+        "path": "Rds",
+        "children": {
+          "databasePassword": {
+            "id": "databasePassword",
+            "path": "Rds/databasePassword",
+            "constructInfo": {
+              "fqn": "aws-cdk-lib.CfnParameter",
+              "version": "2.133.0"
+            }
+          },
+          "Rds": {
+            "id": "Rds",
+            "path": "Rds/Rds",
+            "children": {
+              "from 0.0.0.0_0:3306": {
+                "id": "from 0.0.0.0_0:3306",
+                "path": "Rds/Rds/from 0.0.0.0_0:3306",
+                "attributes": {
+                  "aws:cdk:cloudformation:type": "AWS::EC2::SecurityGroupIngress",
+                  "aws:cdk:cloudformation:props": {
+                    "cidrIp": "0.0.0.0/0",
+                    "description": "from 0.0.0.0/0:3306",
+                    "fromPort": 3306,
+                    "groupId": {
+                      "Fn::ImportValue": "Vpc:ExportsOutputFnGetAttVpc01F824461ADefaultSecurityGroupB47B3935"
+                    },
+                    "ipProtocol": "tcp",
+                    "toPort": 3306
+                  }
+                },
+                "constructInfo": {
+                  "fqn": "aws-cdk-lib.aws_ec2.CfnSecurityGroupIngress",
+                  "version": "2.133.0"
+                }
+              }
+            },
+            "constructInfo": {
+              "fqn": "aws-cdk-lib.Resource",
+              "version": "2.133.0"
+            }
+          },
+          "Rds01": {
+            "id": "Rds01",
+            "path": "Rds/Rds01",
+            "children": {
+              "SubnetGroup": {
+                "id": "SubnetGroup",
+                "path": "Rds/Rds01/SubnetGroup",
+                "children": {
+                  "Default": {
+                    "id": "Default",
+                    "path": "Rds/Rds01/SubnetGroup/Default",
+                    "attributes": {
+                      "aws:cdk:cloudformation:type": "AWS::RDS::DBSubnetGroup",
+                      "aws:cdk:cloudformation:props": {
+                        "dbSubnetGroupDescription": "Subnet group for Rds01 database",
+                        "subnetIds": [
+                          {
+                            "Fn::ImportValue": "Vpc:ExportsOutputRefVpc01PublicSubnet1Subnet52644D7B09B79E25"
+                          },
+                          {
+                            "Fn::ImportValue": "Vpc:ExportsOutputRefVpc01PublicSubnet2Subnet7A06BCF487C69B65"
+                          }
+                        ]
+                      }
+                    },
+                    "constructInfo": {
+                      "fqn": "aws-cdk-lib.aws_rds.CfnDBSubnetGroup",
+                      "version": "2.133.0"
+                    }
+                  }
+                },
+                "constructInfo": {
+                  "fqn": "aws-cdk-lib.aws_rds.SubnetGroup",
+                  "version": "2.133.0"
+                }
+              },
+              "Resource": {
+                "id": "Resource",
+                "path": "Rds/Rds01/Resource",
+                "attributes": {
+                  "aws:cdk:cloudformation:type": "AWS::RDS::DBInstance",
+                  "aws:cdk:cloudformation:props": {
+                    "allocatedStorage": "10",
+                    "copyTagsToSnapshot": true,
+                    "dbInstanceClass": "db.t3.micro",
+                    "dbInstanceIdentifier": "aws-project01-db",
+                    "dbSubnetGroupName": {
+                      "Ref": "Rds01SubnetGroup7C0866B6"
+                    },
+                    "engine": "mysql",
+                    "engineVersion": "5.7",
+                    "masterUsername": "admin",
+                    "masterUserPassword": {
+                      "Ref": "databasePassword"
+                    },
+                    "multiAz": false,
+                    "publiclyAccessible": false,
+                    "storageType": "gp2",
+                    "vpcSecurityGroups": [
+                      {
+                        "Fn::ImportValue": "Vpc:ExportsOutputFnGetAttVpc01F824461ADefaultSecurityGroupB47B3935"
+                      }
+                    ]
+                  }
+                },
+                "constructInfo": {
+                  "fqn": "aws-cdk-lib.aws_rds.CfnDBInstance",
+                  "version": "2.133.0"
+                }
+              }
+            },
+            "constructInfo": {
+              "fqn": "aws-cdk-lib.aws_rds.DatabaseInstance",
+              "version": "2.133.0"
+            }
+          },
+          "rds-endpoint": {
+            "id": "rds-endpoint",
+            "path": "Rds/rds-endpoint",
+            "constructInfo": {
+              "fqn": "aws-cdk-lib.CfnOutput",
+              "version": "2.133.0"
+            }
+          },
+          "rds-password": {
+            "id": "rds-password",
+            "path": "Rds/rds-password",
+            "constructInfo": {
+              "fqn": "aws-cdk-lib.CfnOutput",
+              "version": "2.133.0"
+            }
+          },
+          "CDKMetadata": {
+            "id": "CDKMetadata",
+            "path": "Rds/CDKMetadata",
+            "children": {
+              "Default": {
+                "id": "Default",
+                "path": "Rds/CDKMetadata/Default",
+                "constructInfo": {
+                  "fqn": "aws-cdk-lib.CfnResource",
+                  "version": "2.133.0"
+                }
+              },
+              "Condition": {
+                "id": "Condition",
+                "path": "Rds/CDKMetadata/Condition",
+                "constructInfo": {
+                  "fqn": "aws-cdk-lib.CfnCondition",
+                  "version": "2.133.0"
+                }
+              }
+            },
+            "constructInfo": {
+              "fqn": "constructs.Construct",
+              "version": "10.3.0"
+            }
+          },
+          "BootstrapVersion": {
+            "id": "BootstrapVersion",
+            "path": "Rds/BootstrapVersion",
+            "constructInfo": {
+              "fqn": "aws-cdk-lib.CfnParameter",
+              "version": "2.133.0"
+            }
+          },
+          "CheckBootstrapVersion": {
+            "id": "CheckBootstrapVersion",
+            "path": "Rds/CheckBootstrapVersion",
             "constructInfo": {
               "fqn": "aws-cdk-lib.CfnRule",
               "version": "2.133.0"
@@ -1036,7 +1227,7 @@
                         "containerDefinitions": [
                           {
                             "essential": true,
-                            "image": "jeffvictor98/curso_aws_project1:1.0.0",
+                            "image": "jeffvictor98/curso_aws_project1:1.0.3",
                             "name": "aws_project01",
                             "portMappings": [
                               {
@@ -1055,7 +1246,34 @@
                                   "Ref": "AWS::Region"
                                 }
                               }
-                            }
+                            },
+                            "environment": [
+                              {
+                                "name": "SPRING_DATASOURCE_URL",
+                                "value": {
+                                  "Fn::Join": [
+                                    "",
+                                    [
+                                      "jdbc:mariadb://",
+                                      {
+                                        "Fn::ImportValue": "rds-endpoint"
+                                      },
+                                      ":3306/aws_project01?createDatabaseIfNotExist=true"
+                                    ]
+                                  ]
+                                }
+                              },
+                              {
+                                "name": "SPRING_DATASOURCE_PASSWORD",
+                                "value": {
+                                  "Fn::ImportValue": "rds-password"
+                                }
+                              },
+                              {
+                                "name": "SPRING_DATASOURCE_USERNAME",
+                                "value": "admin"
+                              }
+                            ]
                           }
                         ],
                         "cpu": "512",
