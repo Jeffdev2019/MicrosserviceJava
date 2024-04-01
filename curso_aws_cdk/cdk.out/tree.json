@@ -934,6 +934,128 @@
           "version": "2.133.0"
         }
       },
+      "Sns": {
+        "id": "Sns",
+        "path": "Sns",
+        "children": {
+          "ProductEventsTopic": {
+            "id": "ProductEventsTopic",
+            "path": "Sns/ProductEventsTopic",
+            "children": {
+              "Resource": {
+                "id": "Resource",
+                "path": "Sns/ProductEventsTopic/Resource",
+                "attributes": {
+                  "aws:cdk:cloudformation:type": "AWS::SNS::Topic",
+                  "aws:cdk:cloudformation:props": {
+                    "topicName": "product-events"
+                  }
+                },
+                "constructInfo": {
+                  "fqn": "aws-cdk-lib.aws_sns.CfnTopic",
+                  "version": "2.133.0"
+                }
+              },
+              "jeffersonvic1@hotmail.com": {
+                "id": "jeffersonvic1@hotmail.com",
+                "path": "Sns/ProductEventsTopic/jeffersonvic1@hotmail.com",
+                "children": {
+                  "Resource": {
+                    "id": "Resource",
+                    "path": "Sns/ProductEventsTopic/jeffersonvic1@hotmail.com/Resource",
+                    "attributes": {
+                      "aws:cdk:cloudformation:type": "AWS::SNS::Subscription",
+                      "aws:cdk:cloudformation:props": {
+                        "endpoint": "jeffersonvic1@hotmail.com",
+                        "protocol": "email-json",
+                        "topicArn": {
+                          "Ref": "ProductEventsTopic2164919A"
+                        }
+                      }
+                    },
+                    "constructInfo": {
+                      "fqn": "aws-cdk-lib.aws_sns.CfnSubscription",
+                      "version": "2.133.0"
+                    }
+                  }
+                },
+                "constructInfo": {
+                  "fqn": "aws-cdk-lib.aws_sns.Subscription",
+                  "version": "2.133.0"
+                }
+              }
+            },
+            "constructInfo": {
+              "fqn": "aws-cdk-lib.aws_sns.Topic",
+              "version": "2.133.0"
+            }
+          },
+          "CDKMetadata": {
+            "id": "CDKMetadata",
+            "path": "Sns/CDKMetadata",
+            "children": {
+              "Default": {
+                "id": "Default",
+                "path": "Sns/CDKMetadata/Default",
+                "constructInfo": {
+                  "fqn": "aws-cdk-lib.CfnResource",
+                  "version": "2.133.0"
+                }
+              },
+              "Condition": {
+                "id": "Condition",
+                "path": "Sns/CDKMetadata/Condition",
+                "constructInfo": {
+                  "fqn": "aws-cdk-lib.CfnCondition",
+                  "version": "2.133.0"
+                }
+              }
+            },
+            "constructInfo": {
+              "fqn": "constructs.Construct",
+              "version": "10.3.0"
+            }
+          },
+          "Exports": {
+            "id": "Exports",
+            "path": "Sns/Exports",
+            "children": {
+              "Output{\"Ref\":\"ProductEventsTopic2164919A\"}": {
+                "id": "Output{\"Ref\":\"ProductEventsTopic2164919A\"}",
+                "path": "Sns/Exports/Output{\"Ref\":\"ProductEventsTopic2164919A\"}",
+                "constructInfo": {
+                  "fqn": "aws-cdk-lib.CfnOutput",
+                  "version": "2.133.0"
+                }
+              }
+            },
+            "constructInfo": {
+              "fqn": "constructs.Construct",
+              "version": "10.3.0"
+            }
+          },
+          "BootstrapVersion": {
+            "id": "BootstrapVersion",
+            "path": "Sns/BootstrapVersion",
+            "constructInfo": {
+              "fqn": "aws-cdk-lib.CfnParameter",
+              "version": "2.133.0"
+            }
+          },
+          "CheckBootstrapVersion": {
+            "id": "CheckBootstrapVersion",
+            "path": "Sns/CheckBootstrapVersion",
+            "constructInfo": {
+              "fqn": "aws-cdk-lib.CfnRule",
+              "version": "2.133.0"
+            }
+          }
+        },
+        "constructInfo": {
+          "fqn": "aws-cdk-lib.Stack",
+          "version": "2.133.0"
+        }
+      },
       "Service01": {
         "id": "Service01",
         "path": "Service01",
@@ -1211,6 +1333,47 @@
                           "fqn": "aws-cdk-lib.aws_iam.CfnRole",
                           "version": "2.133.0"
                         }
+                      },
+                      "DefaultPolicy": {
+                        "id": "DefaultPolicy",
+                        "path": "Service01/ALB01/TaskDef/TaskRole/DefaultPolicy",
+                        "children": {
+                          "Resource": {
+                            "id": "Resource",
+                            "path": "Service01/ALB01/TaskDef/TaskRole/DefaultPolicy/Resource",
+                            "attributes": {
+                              "aws:cdk:cloudformation:type": "AWS::IAM::Policy",
+                              "aws:cdk:cloudformation:props": {
+                                "policyDocument": {
+                                  "Statement": [
+                                    {
+                                      "Action": "sns:Publish",
+                                      "Effect": "Allow",
+                                      "Resource": {
+                                        "Fn::ImportValue": "Sns:ExportsOutputRefProductEventsTopic2164919A1EE23678"
+                                      }
+                                    }
+                                  ],
+                                  "Version": "2012-10-17"
+                                },
+                                "policyName": "ALB01TaskDefTaskRoleDefaultPolicy2F92956B",
+                                "roles": [
+                                  {
+                                    "Ref": "ALB01TaskDefTaskRole9240B125"
+                                  }
+                                ]
+                              }
+                            },
+                            "constructInfo": {
+                              "fqn": "aws-cdk-lib.aws_iam.CfnPolicy",
+                              "version": "2.133.0"
+                            }
+                          }
+                        },
+                        "constructInfo": {
+                          "fqn": "aws-cdk-lib.aws_iam.Policy",
+                          "version": "2.133.0"
+                        }
                       }
                     },
                     "constructInfo": {
@@ -1227,7 +1390,7 @@
                         "containerDefinitions": [
                           {
                             "essential": true,
-                            "image": "jeffvictor98/curso_aws_project1:1.0.3",
+                            "image": "jeffvictor98/curso_aws_project1:1.0.4",
                             "name": "aws_project01",
                             "portMappings": [
                               {
@@ -1248,6 +1411,10 @@
                               }
                             },
                             "environment": [
+                              {
+                                "name": "AWS_REGION",
+                                "value": "us-east-1"
+                              },
                               {
                                 "name": "SPRING_DATASOURCE_URL",
                                 "value": {
@@ -1272,6 +1439,12 @@
                               {
                                 "name": "SPRING_DATASOURCE_USERNAME",
                                 "value": "admin"
+                              },
+                              {
+                                "name": "AWS_SNS_TOPIC_PRODUCT_EVENTS_ARN",
+                                "value": {
+                                  "Fn::ImportValue": "Sns:ExportsOutputRefProductEventsTopic2164919A1EE23678"
+                                }
                               }
                             ]
                           }

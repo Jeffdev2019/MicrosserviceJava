@@ -15,9 +15,13 @@ public class CursoAwsCdkApp {
         var rdsStack = new RdsStack(app, "Rds", vpcStack.getVpc());
         rdsStack.addDependency(vpcStack);
 
-        var service01Stack = new Service01Stack(app, "Service01", clusterStack.getCluster());
+        var snsStack = new SnsStack(app, "Sns");
+
+        var service01Stack = new Service01Stack(app, "Service01",
+                clusterStack.getCluster(),snsStack.getProductEventsTopic());
         service01Stack.addDependency(clusterStack);
         service01Stack.addDependency(rdsStack);
+        service01Stack.addDependency(snsStack);
 
         app.synth();
     }

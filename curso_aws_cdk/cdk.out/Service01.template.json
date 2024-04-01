@@ -155,12 +155,42 @@
     "aws:cdk:path": "Service01/ALB01/TaskDef/TaskRole/Resource"
    }
   },
+  "ALB01TaskDefTaskRoleDefaultPolicy2F92956B": {
+   "Type": "AWS::IAM::Policy",
+   "Properties": {
+    "PolicyDocument": {
+     "Statement": [
+      {
+       "Action": "sns:Publish",
+       "Effect": "Allow",
+       "Resource": {
+        "Fn::ImportValue": "Sns:ExportsOutputRefProductEventsTopic2164919A1EE23678"
+       }
+      }
+     ],
+     "Version": "2012-10-17"
+    },
+    "PolicyName": "ALB01TaskDefTaskRoleDefaultPolicy2F92956B",
+    "Roles": [
+     {
+      "Ref": "ALB01TaskDefTaskRole9240B125"
+     }
+    ]
+   },
+   "Metadata": {
+    "aws:cdk:path": "Service01/ALB01/TaskDef/TaskRole/DefaultPolicy/Resource"
+   }
+  },
   "ALB01TaskDef2A307EF6": {
    "Type": "AWS::ECS::TaskDefinition",
    "Properties": {
     "ContainerDefinitions": [
      {
       "Environment": [
+       {
+        "Name": "AWS_REGION",
+        "Value": "us-east-1"
+       },
        {
         "Name": "SPRING_DATASOURCE_URL",
         "Value": {
@@ -185,10 +215,16 @@
        {
         "Name": "SPRING_DATASOURCE_USERNAME",
         "Value": "admin"
+       },
+       {
+        "Name": "AWS_SNS_TOPIC_PRODUCT_EVENTS_ARN",
+        "Value": {
+         "Fn::ImportValue": "Sns:ExportsOutputRefProductEventsTopic2164919A1EE23678"
+        }
        }
       ],
       "Essential": true,
-      "Image": "jeffvictor98/curso_aws_project1:1.0.3",
+      "Image": "jeffvictor98/curso_aws_project1:1.0.4",
       "LogConfiguration": {
        "LogDriver": "awslogs",
        "Options": {
@@ -343,6 +379,7 @@
    "DependsOn": [
     "ALB01LBPublicListenerECSGroup8E5F9C1A",
     "ALB01LBPublicListener21E9450C",
+    "ALB01TaskDefTaskRoleDefaultPolicy2F92956B",
     "ALB01TaskDefTaskRole9240B125"
    ],
    "Metadata": {
@@ -365,6 +402,7 @@
     }
    },
    "DependsOn": [
+    "ALB01TaskDefTaskRoleDefaultPolicy2F92956B",
     "ALB01TaskDefTaskRole9240B125"
    ],
    "Metadata": {
@@ -392,6 +430,7 @@
     "ToPort": 8080
    },
    "DependsOn": [
+    "ALB01TaskDefTaskRoleDefaultPolicy2F92956B",
     "ALB01TaskDefTaskRole9240B125"
    ],
    "Metadata": {
@@ -441,6 +480,7 @@
     "ServiceNamespace": "ecs"
    },
    "DependsOn": [
+    "ALB01TaskDefTaskRoleDefaultPolicy2F92956B",
     "ALB01TaskDefTaskRole9240B125"
    ],
    "Metadata": {
@@ -465,6 +505,7 @@
     }
    },
    "DependsOn": [
+    "ALB01TaskDefTaskRoleDefaultPolicy2F92956B",
     "ALB01TaskDefTaskRole9240B125"
    ],
    "Metadata": {
