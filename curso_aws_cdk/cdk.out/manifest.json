@@ -625,6 +625,170 @@
       },
       "displayName": "Service01"
     },
+    "Service02.assets": {
+      "type": "cdk:asset-manifest",
+      "properties": {
+        "file": "Service02.assets.json",
+        "requiresBootstrapStackVersion": 6,
+        "bootstrapStackVersionSsmParameter": "/cdk-bootstrap/hnb659fds/version"
+      }
+    },
+    "Service02": {
+      "type": "aws:cloudformation:stack",
+      "environment": "aws://unknown-account/unknown-region",
+      "properties": {
+        "templateFile": "Service02.template.json",
+        "terminationProtection": false,
+        "validateOnSynth": false,
+        "assumeRoleArn": "arn:${AWS::Partition}:iam::${AWS::AccountId}:role/cdk-hnb659fds-deploy-role-${AWS::AccountId}-${AWS::Region}",
+        "cloudFormationExecutionRoleArn": "arn:${AWS::Partition}:iam::${AWS::AccountId}:role/cdk-hnb659fds-cfn-exec-role-${AWS::AccountId}-${AWS::Region}",
+        "stackTemplateAssetObjectUrl": "s3://cdk-hnb659fds-assets-${AWS::AccountId}-${AWS::Region}/ef13638de6cdaa3a125cf89dcf5d2e037a77441213d8c3f5632f5d6873b55dd2.json",
+        "requiresBootstrapStackVersion": 6,
+        "bootstrapStackVersionSsmParameter": "/cdk-bootstrap/hnb659fds/version",
+        "additionalDependencies": [
+          "Service02.assets"
+        ],
+        "lookupRole": {
+          "arn": "arn:${AWS::Partition}:iam::${AWS::AccountId}:role/cdk-hnb659fds-lookup-role-${AWS::AccountId}-${AWS::Region}",
+          "requiresBootstrapStackVersion": 8,
+          "bootstrapStackVersionSsmParameter": "/cdk-bootstrap/hnb659fds/version"
+        }
+      },
+      "dependencies": [
+        "Cluster",
+        "Vpc",
+        "Service02.assets"
+      ],
+      "metadata": {
+        "/Service02/Service02LogGroup/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "Service02LogGroup71C46E70"
+          }
+        ],
+        "/Service02/ALB02/LB/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "ALB02LB38482C7E"
+          }
+        ],
+        "/Service02/ALB02/LB/SecurityGroup/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "ALB02LBSecurityGroupA9C5858B"
+          }
+        ],
+        "/Service02/ALB02/LB/SecurityGroup/to Service02ALB02ServiceSecurityGroupD4462A75:9090": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "ALB02LBSecurityGrouptoService02ALB02ServiceSecurityGroupD4462A759090D561623D"
+          }
+        ],
+        "/Service02/ALB02/LB/PublicListener/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "ALB02LBPublicListenerF3668D71"
+          }
+        ],
+        "/Service02/ALB02/LB/PublicListener/ECSGroup/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "ALB02LBPublicListenerECSGroupBB992ACE"
+          }
+        ],
+        "/Service02/ALB02/LoadBalancerDNS": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "ALB02LoadBalancerDNSA74C4090"
+          }
+        ],
+        "/Service02/ALB02/ServiceURL": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "ALB02ServiceURL9A978817"
+          }
+        ],
+        "/Service02/ALB02/TaskDef/TaskRole/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "ALB02TaskDefTaskRoleA842BC02"
+          }
+        ],
+        "/Service02/ALB02/TaskDef/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "ALB02TaskDefC88B37BC"
+          }
+        ],
+        "/Service02/ALB02/TaskDef/ExecutionRole/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "ALB02TaskDefExecutionRole83064E8B"
+          }
+        ],
+        "/Service02/ALB02/TaskDef/ExecutionRole/DefaultPolicy/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "ALB02TaskDefExecutionRoleDefaultPolicyB8FF7005"
+          }
+        ],
+        "/Service02/ALB02/Service/Service": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "ALB02ServiceCD9825DF"
+          }
+        ],
+        "/Service02/ALB02/Service/SecurityGroup/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "ALB02ServiceSecurityGroupCA59572C"
+          }
+        ],
+        "/Service02/ALB02/Service/SecurityGroup/from Service02ALB02LBSecurityGroupA033FD68:9090": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "ALB02ServiceSecurityGroupfromService02ALB02LBSecurityGroupA033FD689090E22919DA"
+          }
+        ],
+        "/Service02/ALB02/Service/TaskCount/Target/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "ALB02ServiceTaskCountTarget95635ACE"
+          }
+        ],
+        "/Service02/ALB02/Service/TaskCount/Target/Service02AutoScaling/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "ALB02ServiceTaskCountTargetService02AutoScaling8E144747"
+          }
+        ],
+        "/Service02/CDKMetadata/Default": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "CDKMetadata"
+          }
+        ],
+        "/Service02/CDKMetadata/Condition": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "CDKMetadataAvailable"
+          }
+        ],
+        "/Service02/BootstrapVersion": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "BootstrapVersion"
+          }
+        ],
+        "/Service02/CheckBootstrapVersion": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "CheckBootstrapVersion"
+          }
+        ]
+      },
+      "displayName": "Service02"
+    },
     "Tree": {
       "type": "cdk:tree",
       "properties": {

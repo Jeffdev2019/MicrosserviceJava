@@ -1,3 +1,4 @@
+com\myorg\Service02Stack.class
 com\myorg\VpcStack.class
 com\myorg\CursoAwsCdkApp.class
 com\myorg\CursoAwsCdkStack.class

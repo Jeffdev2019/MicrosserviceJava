@@ -1,7 +1,8 @@
-C:\Workspace\Java\Spring com AWS\aws_project01\curso_aws_cdk\src\main\java\com\myorg\CursoAwsCdkApp.java
-C:\Workspace\Java\Spring com AWS\aws_project01\curso_aws_cdk\src\main\java\com\myorg\SnsStack.java
-C:\Workspace\Java\Spring com AWS\aws_project01\curso_aws_cdk\src\main\java\com\myorg\VpcStack.java
-C:\Workspace\Java\Spring com AWS\aws_project01\curso_aws_cdk\src\main\java\com\myorg\CursoAwsCdkStack.java
-C:\Workspace\Java\Spring com AWS\aws_project01\curso_aws_cdk\src\main\java\com\myorg\RdsStack.java
-C:\Workspace\Java\Spring com AWS\aws_project01\curso_aws_cdk\src\main\java\com\myorg\ClusterStack.java
-C:\Workspace\Java\Spring com AWS\aws_project01\curso_aws_cdk\src\main\java\com\myorg\Service01Stack.java
+C:\Workspace\Java\Spring com AWS\curso_aws_cdk\src\main\java\com\myorg\Service01Stack.java
+C:\Workspace\Java\Spring com AWS\curso_aws_cdk\src\main\java\com\myorg\ClusterStack.java
+C:\Workspace\Java\Spring com AWS\curso_aws_cdk\src\main\java\com\myorg\CursoAwsCdkApp.java
+C:\Workspace\Java\Spring com AWS\curso_aws_cdk\src\main\java\com\myorg\SnsStack.java
+C:\Workspace\Java\Spring com AWS\curso_aws_cdk\src\main\java\com\myorg\VpcStack.java
+C:\Workspace\Java\Spring com AWS\curso_aws_cdk\src\main\java\com\myorg\CursoAwsCdkStack.java
+C:\Workspace\Java\Spring com AWS\curso_aws_cdk\src\main\java\com\myorg\Service02Stack.java
+C:\Workspace\Java\Spring com AWS\curso_aws_cdk\src\main\java\com\myorg\RdsStack.java

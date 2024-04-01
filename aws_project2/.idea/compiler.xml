@@ -2,8 +2,8 @@
 <project version="4">
   <component name="CompilerConfiguration">
     <bytecodeTargetLevel>
-      <module name="aws_project2.aws_project2.main" target="21" />
-      <module name="aws_project2.aws_project2.test" target="21" />
+      <module name="aws_project2.aws_project2.main~1" target="21" />
+      <module name="aws_project2.aws_project2.test~1" target="21" />
     </bytecodeTargetLevel>
   </component>
 </project>

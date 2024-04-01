@@ -1,0 +1,281 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="26d7126b-d462-417f-98d0-6a04a34afddb" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/../aws_project1/aws-project1/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/../aws_project1/aws-project1/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/aws_project2/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/aws_project2/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/aws_project2/src/main/java/com/example/victor/aws_project2/AwsProject2Application.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/aws_project2/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/aws_project2/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/aws_project2/src/test/java/com/example/victor/aws_project2/AwsProject2ApplicationTests.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../curso_aws_cdk/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../curso_aws_cdk/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../curso_aws_cdk/cdk.out/manifest.json" beforeDir="false" afterPath="$PROJECT_DIR$/../curso_aws_cdk/cdk.out/manifest.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../curso_aws_cdk/cdk.out/tree.json" beforeDir="false" afterPath="$PROJECT_DIR$/../curso_aws_cdk/cdk.out/tree.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../curso_aws_cdk/src/main/java/com/myorg/CursoAwsCdkApp.java" beforeDir="false" afterPath="$PROJECT_DIR$/../curso_aws_cdk/src/main/java/com/myorg/CursoAwsCdkApp.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../curso_aws_cdk/target/classes/com/myorg/ClusterStack.class" beforeDir="false" afterPath="$PROJECT_DIR$/../curso_aws_cdk/target/classes/com/myorg/ClusterStack.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../curso_aws_cdk/target/classes/com/myorg/CursoAwsCdkApp.class" beforeDir="false" afterPath="$PROJECT_DIR$/../curso_aws_cdk/target/classes/com/myorg/CursoAwsCdkApp.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../curso_aws_cdk/target/classes/com/myorg/CursoAwsCdkStack.class" beforeDir="false" afterPath="$PROJECT_DIR$/../curso_aws_cdk/target/classes/com/myorg/CursoAwsCdkStack.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../curso_aws_cdk/target/classes/com/myorg/RdsStack.class" beforeDir="false" afterPath="$PROJECT_DIR$/../curso_aws_cdk/target/classes/com/myorg/RdsStack.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../curso_aws_cdk/target/classes/com/myorg/Service01Stack.class" beforeDir="false" afterPath="$PROJECT_DIR$/../curso_aws_cdk/target/classes/com/myorg/Service01Stack.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../curso_aws_cdk/target/classes/com/myorg/SnsStack.class" beforeDir="false" afterPath="$PROJECT_DIR$/../curso_aws_cdk/target/classes/com/myorg/SnsStack.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../curso_aws_cdk/target/classes/com/myorg/VpcStack.class" beforeDir="false" afterPath="$PROJECT_DIR$/../curso_aws_cdk/target/classes/com/myorg/VpcStack.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../curso_aws_cdk/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/../curso_aws_cdk/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../curso_aws_cdk/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/../curso_aws_cdk/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ExternalProjectsData">
+    <projectState path="$PROJECT_DIR$/aws_project2">
+      <ProjectState />
+    </projectState>
+  </component>
+  <component name="ExternalProjectsManager">
+    <system id="GRADLE">
+      <state>
+        <task path="$PROJECT_DIR$/aws_project2">
+          <activation />
+        </task>
+        <projects_view>
+          <tree_state>
+            <expand>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="aws_project2" type="f1a62948:ProjectNode" />
+              </path>
+            </expand>
+            <select />
+          </tree_state>
+        </projects_view>
+      </state>
+    </system>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProblemsViewState">
+    <option name="selectedTabId" value="DEPENDENCY_CHECKER_PROBLEMS_TAB" />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;customColor&quot;: &quot;&quot;,
+  &quot;associatedIndex&quot;: 2
+}</component>
+  <component name="ProjectId" id="2eTnKl3Ck6tIdGOJjDBx72O8J0P" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="1" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Application.AwsProject2Application.executor": "Run",
+    "Gradle.Build aws_project2.executor": "Run",
+    "Gradle.aws_project2 [:AwsProject2Application.main()].executor": "Run",
+    "Gradle.aws_project2 [dockerPush1.0.0].executor": "Run",
+    "Gradle.aws_project2 [dockerPush1.0.1].executor": "Run",
+    "Gradle.aws_project2 [dockerPush1.0.2].executor": "Run",
+    "Gradle.aws_project2 [dockerPush1.0.3].executor": "Run",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "git-widget-placeholder": "master",
+    "ignore.virus.scanning.warn.message": "true",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "C:/Workspace/Java/Spring com AWS/aws_project2/aws_project2"
+  }
+}]]></component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Workspace\Java\Spring com AWS\aws_project2\aws_project2\src\main\java\br\com\example\victor\aws_project2" />
+      <recent name="C:\Workspace\Java\Spring com AWS\aws_project2\aws_project2" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Application.AwsProject2Application">
+    <configuration name="AwsProject2Application" type="Application" factoryName="Application" activateToolWindowBeforeRun="false" temporary="true" nameIsGenerated="true">
+      <option name="ALTERNATIVE_JRE_PATH" value="21" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
+      <envs>
+        <env name="spring.profiles.active" value="debug" />
+      </envs>
+      <option name="MAIN_CLASS_NAME" value="br.com.example.victor.aws_project2.AwsProject2Application" />
+      <module name="aws_project2.aws_project2.main" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/aws_project2" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="br.com.example.victor.aws_project2.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="aws_project2 [dockerPush1.0.0]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$/aws_project2" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value="dockerPush1.0.0" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>true</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <RunAsTest>false</RunAsTest>
+      <method v="2" />
+    </configuration>
+    <configuration name="aws_project2 [dockerPush1.0.1]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$/aws_project2" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value="dockerPush1.0.1" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>true</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <RunAsTest>false</RunAsTest>
+      <method v="2" />
+    </configuration>
+    <configuration name="aws_project2 [dockerPush1.0.2]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$/aws_project2" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value="dockerPush1.0.2" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>true</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <RunAsTest>false</RunAsTest>
+      <method v="2" />
+    </configuration>
+    <configuration name="aws_project2 [dockerPush1.0.3]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$/aws_project2" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value="dockerPush1.0.3" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>true</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <RunAsTest>false</RunAsTest>
+      <method v="2" />
+    </configuration>
+    <list>
+      <item itemvalue="Application.AwsProject2Application" />
+      <item itemvalue="Gradle.aws_project2 [dockerPush1.0.0]" />
+      <item itemvalue="Gradle.aws_project2 [dockerPush1.0.1]" />
+      <item itemvalue="Gradle.aws_project2 [dockerPush1.0.2]" />
+      <item itemvalue="Gradle.aws_project2 [dockerPush1.0.3]" />
+    </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.AwsProject2Application" />
+        <item itemvalue="Gradle.aws_project2 [dockerPush1.0.3]" />
+        <item itemvalue="Gradle.aws_project2 [dockerPush1.0.2]" />
+        <item itemvalue="Gradle.aws_project2 [dockerPush1.0.1]" />
+        <item itemvalue="Gradle.aws_project2 [dockerPush1.0.0]" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="jdk-21.0.1-openjdk-21.0.1-4caba194b151-23eed401" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="26d7126b-d462-417f-98d0-6a04a34afddb" name="Changes" comment="" />
+      <created>1711937374788</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1711937374788</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.amazonaws/amazon-sqs-java-messaging-lib/2.1.2/af4783d3ec96ed8022c3c26dfba53ea26100a3f4/amazon-sqs-java-messaging-lib-2.1.2.jar!/com/amazon/sqs/javamessaging/SQSConnectionFactory.class</url>
+          <line>39</line>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/aws_project2$AwsProject2Application.ic" NAME="AwsProject2Application Coverage Results" MODIFIED="1711956543666" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>br.com.example.victor.aws_project2.*</FILTER>
+    </SUITE>
+  </component>
+</project>
