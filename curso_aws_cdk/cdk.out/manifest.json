@@ -470,7 +470,7 @@
         "validateOnSynth": false,
         "assumeRoleArn": "arn:${AWS::Partition}:iam::${AWS::AccountId}:role/cdk-hnb659fds-deploy-role-${AWS::AccountId}-${AWS::Region}",
         "cloudFormationExecutionRoleArn": "arn:${AWS::Partition}:iam::${AWS::AccountId}:role/cdk-hnb659fds-cfn-exec-role-${AWS::AccountId}-${AWS::Region}",
-        "stackTemplateAssetObjectUrl": "s3://cdk-hnb659fds-assets-${AWS::AccountId}-${AWS::Region}/422125ca94a77aece69b8fccbe80a11fe3e95bc61a22aead43c259d185202325.json",
+        "stackTemplateAssetObjectUrl": "s3://cdk-hnb659fds-assets-${AWS::AccountId}-${AWS::Region}/9ecd0629e9a8abdd965f55fedda004374bb461b7ff645dfa6dfc5180ad4d31b5.json",
         "requiresBootstrapStackVersion": 6,
         "bootstrapStackVersionSsmParameter": "/cdk-bootstrap/hnb659fds/version",
         "additionalDependencies": [
@@ -642,7 +642,7 @@
         "validateOnSynth": false,
         "assumeRoleArn": "arn:${AWS::Partition}:iam::${AWS::AccountId}:role/cdk-hnb659fds-deploy-role-${AWS::AccountId}-${AWS::Region}",
         "cloudFormationExecutionRoleArn": "arn:${AWS::Partition}:iam::${AWS::AccountId}:role/cdk-hnb659fds-cfn-exec-role-${AWS::AccountId}-${AWS::Region}",
-        "stackTemplateAssetObjectUrl": "s3://cdk-hnb659fds-assets-${AWS::AccountId}-${AWS::Region}/ef13638de6cdaa3a125cf89dcf5d2e037a77441213d8c3f5632f5d6873b55dd2.json",
+        "stackTemplateAssetObjectUrl": "s3://cdk-hnb659fds-assets-${AWS::AccountId}-${AWS::Region}/4aab5d86dd17187dc4f9d00b6812887ac78668d12f8d1c82f0707421babf2530.json",
         "requiresBootstrapStackVersion": 6,
         "bootstrapStackVersionSsmParameter": "/cdk-bootstrap/hnb659fds/version",
         "additionalDependencies": [
@@ -655,11 +655,36 @@
         }
       },
       "dependencies": [
+        "Sns",
         "Cluster",
         "Vpc",
         "Service02.assets"
       ],
       "metadata": {
+        "/Service02/ProductEventsDlq/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "ProductEventsDlq89DE295F"
+          }
+        ],
+        "/Service02/ProductEvents/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "ProductEventsBB5A1CE1"
+          }
+        ],
+        "/Service02/ProductEvents/Policy/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "ProductEventsPolicy62F6A054"
+          }
+        ],
+        "/Service02/ProductEvents/SnsProductEventsTopicCE864692/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "ProductEventsSnsProductEventsTopicCE8646929ACA8246"
+          }
+        ],
         "/Service02/Service02LogGroup/Resource": [
           {
             "type": "aws:cdk:logicalId",
@@ -678,10 +703,10 @@
             "data": "ALB02LBSecurityGroupA9C5858B"
           }
         ],
-        "/Service02/ALB02/LB/SecurityGroup/to Service02ALB02ServiceSecurityGroupD4462A75:9090": [
+        "/Service02/ALB02/LB/SecurityGroup/to Service02ALB02ServiceSecurityGroupD4462A75:8081": [
           {
             "type": "aws:cdk:logicalId",
-            "data": "ALB02LBSecurityGrouptoService02ALB02ServiceSecurityGroupD4462A759090D561623D"
+            "data": "ALB02LBSecurityGrouptoService02ALB02ServiceSecurityGroupD4462A75808150543F47"
           }
         ],
         "/Service02/ALB02/LB/PublicListener/Resource": [
@@ -714,6 +739,12 @@
             "data": "ALB02TaskDefTaskRoleA842BC02"
           }
         ],
+        "/Service02/ALB02/TaskDef/TaskRole/DefaultPolicy/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "ALB02TaskDefTaskRoleDefaultPolicy74F34361"
+          }
+        ],
         "/Service02/ALB02/TaskDef/Resource": [
           {
             "type": "aws:cdk:logicalId",
@@ -744,10 +775,10 @@
             "data": "ALB02ServiceSecurityGroupCA59572C"
           }
         ],
-        "/Service02/ALB02/Service/SecurityGroup/from Service02ALB02LBSecurityGroupA033FD68:9090": [
+        "/Service02/ALB02/Service/SecurityGroup/from Service02ALB02LBSecurityGroupA033FD68:8081": [
           {
             "type": "aws:cdk:logicalId",
-            "data": "ALB02ServiceSecurityGroupfromService02ALB02LBSecurityGroupA033FD689090E22919DA"
+            "data": "ALB02ServiceSecurityGroupfromService02ALB02LBSecurityGroupA033FD688081E1D25338"
           }
         ],
         "/Service02/ALB02/Service/TaskCount/Target/Resource": [

@@ -29,7 +29,7 @@ java {
 
 bootJar {
 	archiveBaseName = 'curso_aws_project1'
-	archiveVersion = '1.0.4'
+	archiveVersion = '1.0.5'
 }
 
 task unpack(type: Copy) {

@@ -1390,7 +1390,7 @@
                         "containerDefinitions": [
                           {
                             "essential": true,
-                            "image": "jeffvictor98/curso_aws_project1:1.0.4",
+                            "image": "jeffvictor98/curso_aws_project1:1.0.5",
                             "name": "aws_project01",
                             "portMappings": [
                               {
@@ -1888,6 +1888,151 @@
         "id": "Service02",
         "path": "Service02",
         "children": {
+          "ProductEventsDlq": {
+            "id": "ProductEventsDlq",
+            "path": "Service02/ProductEventsDlq",
+            "children": {
+              "Resource": {
+                "id": "Resource",
+                "path": "Service02/ProductEventsDlq/Resource",
+                "attributes": {
+                  "aws:cdk:cloudformation:type": "AWS::SQS::Queue",
+                  "aws:cdk:cloudformation:props": {
+                    "queueName": "product-events-dlq",
+                    "sqsManagedSseEnabled": false
+                  }
+                },
+                "constructInfo": {
+                  "fqn": "aws-cdk-lib.aws_sqs.CfnQueue",
+                  "version": "2.133.0"
+                }
+              }
+            },
+            "constructInfo": {
+              "fqn": "aws-cdk-lib.aws_sqs.Queue",
+              "version": "2.133.0"
+            }
+          },
+          "ProductEvents": {
+            "id": "ProductEvents",
+            "path": "Service02/ProductEvents",
+            "children": {
+              "Resource": {
+                "id": "Resource",
+                "path": "Service02/ProductEvents/Resource",
+                "attributes": {
+                  "aws:cdk:cloudformation:type": "AWS::SQS::Queue",
+                  "aws:cdk:cloudformation:props": {
+                    "queueName": "product-events",
+                    "redrivePolicy": {
+                      "deadLetterTargetArn": {
+                        "Fn::GetAtt": [
+                          "ProductEventsDlq89DE295F",
+                          "Arn"
+                        ]
+                      },
+                      "maxReceiveCount": 3
+                    },
+                    "sqsManagedSseEnabled": false
+                  }
+                },
+                "constructInfo": {
+                  "fqn": "aws-cdk-lib.aws_sqs.CfnQueue",
+                  "version": "2.133.0"
+                }
+              },
+              "Policy": {
+                "id": "Policy",
+                "path": "Service02/ProductEvents/Policy",
+                "children": {
+                  "Resource": {
+                    "id": "Resource",
+                    "path": "Service02/ProductEvents/Policy/Resource",
+                    "attributes": {
+                      "aws:cdk:cloudformation:type": "AWS::SQS::QueuePolicy",
+                      "aws:cdk:cloudformation:props": {
+                        "policyDocument": {
+                          "Statement": [
+                            {
+                              "Action": "sqs:SendMessage",
+                              "Condition": {
+                                "ArnEquals": {
+                                  "aws:SourceArn": {
+                                    "Fn::ImportValue": "Sns:ExportsOutputRefProductEventsTopic2164919A1EE23678"
+                                  }
+                                }
+                              },
+                              "Effect": "Allow",
+                              "Principal": {
+                                "Service": "sns.amazonaws.com"
+                              },
+                              "Resource": {
+                                "Fn::GetAtt": [
+                                  "ProductEventsBB5A1CE1",
+                                  "Arn"
+                                ]
+                              }
+                            }
+                          ],
+                          "Version": "2012-10-17"
+                        },
+                        "queues": [
+                          {
+                            "Ref": "ProductEventsBB5A1CE1"
+                          }
+                        ]
+                      }
+                    },
+                    "constructInfo": {
+                      "fqn": "aws-cdk-lib.aws_sqs.CfnQueuePolicy",
+                      "version": "2.133.0"
+                    }
+                  }
+                },
+                "constructInfo": {
+                  "fqn": "aws-cdk-lib.aws_sqs.QueuePolicy",
+                  "version": "2.133.0"
+                }
+              },
+              "SnsProductEventsTopicCE864692": {
+                "id": "SnsProductEventsTopicCE864692",
+                "path": "Service02/ProductEvents/SnsProductEventsTopicCE864692",
+                "children": {
+                  "Resource": {
+                    "id": "Resource",
+                    "path": "Service02/ProductEvents/SnsProductEventsTopicCE864692/Resource",
+                    "attributes": {
+                      "aws:cdk:cloudformation:type": "AWS::SNS::Subscription",
+                      "aws:cdk:cloudformation:props": {
+                        "endpoint": {
+                          "Fn::GetAtt": [
+                            "ProductEventsBB5A1CE1",
+                            "Arn"
+                          ]
+                        },
+                        "protocol": "sqs",
+                        "topicArn": {
+                          "Fn::ImportValue": "Sns:ExportsOutputRefProductEventsTopic2164919A1EE23678"
+                        }
+                      }
+                    },
+                    "constructInfo": {
+                      "fqn": "aws-cdk-lib.aws_sns.CfnSubscription",
+                      "version": "2.133.0"
+                    }
+                  }
+                },
+                "constructInfo": {
+                  "fqn": "aws-cdk-lib.aws_sns.Subscription",
+                  "version": "2.133.0"
+                }
+              }
+            },
+            "constructInfo": {
+              "fqn": "aws-cdk-lib.aws_sqs.Queue",
+              "version": "2.133.0"
+            }
+          },
           "Service02LogGroup": {
             "id": "Service02LogGroup",
             "path": "Service02/Service02LogGroup",
@@ -1973,9 +2118,9 @@
                               {
                                 "cidrIp": "0.0.0.0/0",
                                 "ipProtocol": "tcp",
-                                "fromPort": 9090,
-                                "toPort": 9090,
-                                "description": "Allow from anyone on port 9090"
+                                "fromPort": 8081,
+                                "toPort": 8081,
+                                "description": "Allow from anyone on port 8081"
                               }
                             ],
                             "vpcId": {
@@ -1988,9 +2133,9 @@
                           "version": "2.133.0"
                         }
                       },
-                      "to Service02ALB02ServiceSecurityGroupD4462A75:9090": {
-                        "id": "to Service02ALB02ServiceSecurityGroupD4462A75:9090",
-                        "path": "Service02/ALB02/LB/SecurityGroup/to Service02ALB02ServiceSecurityGroupD4462A75:9090",
+                      "to Service02ALB02ServiceSecurityGroupD4462A75:8081": {
+                        "id": "to Service02ALB02ServiceSecurityGroupD4462A75:8081",
+                        "path": "Service02/ALB02/LB/SecurityGroup/to Service02ALB02ServiceSecurityGroupD4462A75:8081",
                         "attributes": {
                           "aws:cdk:cloudformation:type": "AWS::EC2::SecurityGroupEgress",
                           "aws:cdk:cloudformation:props": {
@@ -2001,7 +2146,7 @@
                                 "GroupId"
                               ]
                             },
-                            "fromPort": 9090,
+                            "fromPort": 8081,
                             "groupId": {
                               "Fn::GetAtt": [
                                 "ALB02LBSecurityGroupA9C5858B",
@@ -2009,7 +2154,7 @@
                               ]
                             },
                             "ipProtocol": "tcp",
-                            "toPort": 9090
+                            "toPort": 8081
                           }
                         },
                         "constructInfo": {
@@ -2044,7 +2189,7 @@
                             "loadBalancerArn": {
                               "Ref": "ALB02LB38482C7E"
                             },
-                            "port": 9090,
+                            "port": 8081,
                             "protocol": "HTTP"
                           }
                         },
@@ -2161,6 +2306,56 @@
                           "fqn": "aws-cdk-lib.aws_iam.CfnRole",
                           "version": "2.133.0"
                         }
+                      },
+                      "DefaultPolicy": {
+                        "id": "DefaultPolicy",
+                        "path": "Service02/ALB02/TaskDef/TaskRole/DefaultPolicy",
+                        "children": {
+                          "Resource": {
+                            "id": "Resource",
+                            "path": "Service02/ALB02/TaskDef/TaskRole/DefaultPolicy/Resource",
+                            "attributes": {
+                              "aws:cdk:cloudformation:type": "AWS::IAM::Policy",
+                              "aws:cdk:cloudformation:props": {
+                                "policyDocument": {
+                                  "Statement": [
+                                    {
+                                      "Action": [
+                                        "sqs:ChangeMessageVisibility",
+                                        "sqs:DeleteMessage",
+                                        "sqs:GetQueueAttributes",
+                                        "sqs:GetQueueUrl",
+                                        "sqs:ReceiveMessage"
+                                      ],
+                                      "Effect": "Allow",
+                                      "Resource": {
+                                        "Fn::GetAtt": [
+                                          "ProductEventsBB5A1CE1",
+                                          "Arn"
+                                        ]
+                                      }
+                                    }
+                                  ],
+                                  "Version": "2012-10-17"
+                                },
+                                "policyName": "ALB02TaskDefTaskRoleDefaultPolicy74F34361",
+                                "roles": [
+                                  {
+                                    "Ref": "ALB02TaskDefTaskRoleA842BC02"
+                                  }
+                                ]
+                              }
+                            },
+                            "constructInfo": {
+                              "fqn": "aws-cdk-lib.aws_iam.CfnPolicy",
+                              "version": "2.133.0"
+                            }
+                          }
+                        },
+                        "constructInfo": {
+                          "fqn": "aws-cdk-lib.aws_iam.Policy",
+                          "version": "2.133.0"
+                        }
                       }
                     },
                     "constructInfo": {
@@ -2177,11 +2372,11 @@
                         "containerDefinitions": [
                           {
                             "essential": true,
-                            "image": "jeffvictor98/curso_aws_project2:1.0.3",
+                            "image": "jeffvictor98/awsproject3:latest",
                             "name": "aws_project02",
                             "portMappings": [
                               {
-                                "containerPort": 9090,
+                                "containerPort": 8081,
                                 "protocol": "tcp"
                               }
                             ],
@@ -2201,6 +2396,21 @@
                               {
                                 "name": "AWS_REGION",
                                 "value": "us-east-1"
+                              },
+                              {
+                                "name": "AWS_SQS_QUEUE_PRODUCT_EVENTS_URL",
+                                "value": {
+                                  "Ref": "ProductEventsBB5A1CE1"
+                                }
+                              },
+                              {
+                                "name": "AWS_SQS_QUEUE_PRODUCT_EVENTS_NAME",
+                                "value": {
+                                  "Fn::GetAtt": [
+                                    "ProductEventsBB5A1CE1",
+                                    "QueueName"
+                                  ]
+                                }
                               }
                             ]
                           }
@@ -2367,7 +2577,7 @@
                               "Ref": "ALB02LBPublicListenerECSGroupBB992ACE"
                             },
                             "containerName": "aws_project02",
-                            "containerPort": 9090
+                            "containerPort": 8081
                           }
                         ],
                         "networkConfiguration": {
@@ -2430,14 +2640,14 @@
                           "version": "2.133.0"
                         }
                       },
-                      "from Service02ALB02LBSecurityGroupA033FD68:9090": {
-                        "id": "from Service02ALB02LBSecurityGroupA033FD68:9090",
-                        "path": "Service02/ALB02/Service/SecurityGroup/from Service02ALB02LBSecurityGroupA033FD68:9090",
+                      "from Service02ALB02LBSecurityGroupA033FD68:8081": {
+                        "id": "from Service02ALB02LBSecurityGroupA033FD68:8081",
+                        "path": "Service02/ALB02/Service/SecurityGroup/from Service02ALB02LBSecurityGroupA033FD68:8081",
                         "attributes": {
                           "aws:cdk:cloudformation:type": "AWS::EC2::SecurityGroupIngress",
                           "aws:cdk:cloudformation:props": {
                             "description": "Load balancer to target",
-                            "fromPort": 9090,
+                            "fromPort": 8081,
                             "groupId": {
                               "Fn::GetAtt": [
                                 "ALB02ServiceSecurityGroupCA59572C",
@@ -2451,7 +2661,7 @@
                                 "GroupId"
                               ]
                             },
-                            "toPort": 9090
+                            "toPort": 8081
                           }
                         },
                         "constructInfo": {

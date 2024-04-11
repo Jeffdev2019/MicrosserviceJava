@@ -5,20 +5,30 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="cc0f804c-d2d2-4906-b15e-9bed26512a9b" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/../aws_project2/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../aws_project2/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../aws_project2/.idea/compiler.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../aws_project2/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../aws_project2/.idea/gradle.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../aws_project1/aws-project1/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/../aws_project1/aws-project1/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../aws_project2/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../aws_project2/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../aws_project2/aws_project2/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/../aws_project2/aws_project2/build.gradle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../aws_project2/aws_project2/src/main/java/com/example/victor/aws_project2/AwsProject2Application.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../aws_project2/aws_project2/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/../aws_project2/aws_project2/src/main/resources/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../aws_project2/aws_project2/src/test/java/com/example/victor/aws_project2/AwsProject2ApplicationTests.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../aws_project2/aws_project2/src/main/java/br/com/example/victor/aws_project2/config/JmsConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/../aws_project2/aws_project2/src/main/java/br/com/example/victor/aws_project2/config/JmsConfig.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cdk.out/Service01.assets.json" beforeDir="false" afterPath="$PROJECT_DIR$/cdk.out/Service01.assets.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cdk.out/Service01.template.json" beforeDir="false" afterPath="$PROJECT_DIR$/cdk.out/Service01.template.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cdk.out/Service02.assets.json" beforeDir="false" afterPath="$PROJECT_DIR$/cdk.out/Service02.assets.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cdk.out/Service02.template.json" beforeDir="false" afterPath="$PROJECT_DIR$/cdk.out/Service02.template.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cdk.out/manifest.json" beforeDir="false" afterPath="$PROJECT_DIR$/cdk.out/manifest.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cdk.out/read.2576.1.lock" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/cdk.out/tree.json" beforeDir="false" afterPath="$PROJECT_DIR$/cdk.out/tree.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/myorg/CursoAwsCdkApp.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/myorg/CursoAwsCdkApp.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/myorg/Service01Stack.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/myorg/Service01Stack.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/myorg/Service02Stack.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/myorg/Service02Stack.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/myorg/ClusterStack.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/myorg/ClusterStack.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/myorg/CursoAwsCdkApp.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/myorg/CursoAwsCdkApp.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/myorg/CursoAwsCdkStack.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/myorg/CursoAwsCdkStack.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/myorg/RdsStack.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/myorg/RdsStack.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/myorg/Service01Stack.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/myorg/Service01Stack.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/myorg/Service02Stack.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/myorg/Service02Stack.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/myorg/SnsStack.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/myorg/SnsStack.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/myorg/SqsStack.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/myorg/SqsStack.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/myorg/VpcStack.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/myorg/VpcStack.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

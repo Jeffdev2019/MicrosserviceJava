@@ -224,7 +224,7 @@
        }
       ],
       "Essential": true,
-      "Image": "jeffvictor98/curso_aws_project1:1.0.4",
+      "Image": "jeffvictor98/curso_aws_project1:1.0.5",
       "LogConfiguration": {
        "LogDriver": "awslogs",
        "Options": {
